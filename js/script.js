@@ -155,7 +155,7 @@ function render(text, name, img){
   btn.addEventListener('click', closeAboutPersonBox);
 }
 
-function closeAboutPersonBox(){
+function closeAboutPersonBox(event){
   var borderbox = document.getElementsByClassName('about-border-box');
   for (var i = 0; i < borderbox.length; i++){
     borderbox[i].className = 'col-t-4 about-border-box flex-center flex-column';
@@ -268,7 +268,7 @@ var beachMarker = new google.maps.Marker({
   position: {lat: 59.3279808, lng: 18.05849},
   map: map,
   icon: image,
-  title: 'Akta dig för spindeln'
+  title: 'Välkommen in på en bira!'
 });
 
 
