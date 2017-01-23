@@ -3,49 +3,56 @@ window.onscroll = function() {
     scrollEffects();
 };
 
+const desktop = window.matchMedia("(min-width: 1024px)");
+const mobile = window.matchMedia("(max-width: 600px)");
+
 function scrollEffects() {
     const scrollBarPosition = window.pageYOffset | document.body.scrollTop;
     const scroller = document.getElementById('scroller');
     const navLinks = document.getElementsByClassName('nav-links');
     const desktopNav = document.getElementById("desktop-nav");
     const logo = document.getElementById("logo");
-    const desktop = window.matchMedia("(min-width: 1024px)");
-    const mobile = window.matchMedia("(max-width: 600px)");
     const aboutUsBox = document.getElementsByClassName('circle-img');
 
     if (desktop.matches) {
-      if (scrollBarPosition < 700) {
+      if (scrollBarPosition < 600) {
         desktopNav.style.backgroundColor = "transparent";
         desktopNav.style.padding = "12px";
         logo.style.padding = "8px";
         logo.style.width = "115%";
-            navLinks[4].style.color = 'rgb(223, 72, 89)';
-            for (let i = 4; i < navLinks.length; i++) {
-                if (i !== 4) {
-                    navLinks[i].style.color = 'white';
-                }
-             }
         for (let i = 0; i < navLinks.length; i++) {
           navLinks[i].style.fontSize = "24px";
         }
       }
-        if (scrollBarPosition > 700) {
-              navLinks[5].style.color = 'rgb(223, 72, 89)';
-              desktopNav.style.backgroundColor = "black";
+        if (scrollBarPosition > 600) {
+              desktopNav.style.backgroundColor = "rgba(0, 0, 0, 0.9)";
               desktopNav.style.padding = "5px";
               logo.style.padding = "0px";
               logo.style.width = "90%";
-              for (let i = 4; i < navLinks.length; i++) {
-                  if (i != 5) {
-                      navLinks[i].style.color = 'white';
-                  }
-              }
               for (let i = 0; i < navLinks.length; i++) {
                 navLinks[i].style.fontSize = "19.2px";
                 }
             }
 
- if (scrollBarPosition > 2700) {
+              if (scrollBarPosition < 1300) {
+                  navLinks[4].style.color = 'rgb(223, 72, 89)';
+                  for (let i = 4; i < navLinks.length; i++) {
+                      if (i !== 4) {
+                          navLinks[i].style.color = 'white';
+                      }
+                   }
+              }
+
+            if (scrollBarPosition > 1300) {
+                navLinks[5].style.color = 'rgb(223, 72, 89)';
+              for (let i = 4; i < navLinks.length; i++) {
+                  if (i != 5) {
+                      navLinks[i].style.color = 'white';
+                  }
+              }
+            }
+
+ if (scrollBarPosition > 2500) {
         navLinks[6].style.color = 'rgb(223, 72, 89)';
         for (let i = 4; i < navLinks.length; i++) {
             if (i !== 6) {
@@ -62,7 +69,7 @@ function scrollEffects() {
                 navLinks[i].style.color = 'white';
             }
         }
-    } if (scrollBarPosition > 4900) {
+    } if (scrollBarPosition > 4400) {
         navLinks[8].style.color = 'rgb(223, 72, 89)';
         for (let i = 4; i < navLinks.length; i++) {
             if (i !== 8) {
@@ -81,7 +88,7 @@ function scrollEffects() {
   }
   if (mobile.matches) {
     if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
-    scroller.style.bottom = "2rem";
+    scroller.style.bottom = "2.4rem";
   }
   else {
     scroller.style.bottom = "0";
@@ -94,7 +101,7 @@ if (!desktop.matches && !mobile.matches) {
     }
 
     if (scrollBarPosition > 50) {
-        desktopNav.style.backgroundColor = "black";
+        desktopNav.style.backgroundColor = "rgba(0, 0, 0, 0.9)";
       }
 
     }
@@ -105,9 +112,11 @@ var matte = 'Lorem Ipsum är en utfyllnadstext från tryck- och förlagsindustri
 var andreas = 'Lorem Ipsum är en utfyllnadstext från tryck- och förlagsindustrin. Lorem ipsum har varit standard ända sedan 1500-talet, när en okänd boksättare tog att antal bokstäver och blandade dem för att göra ett provexemplar av en bok.';
 var nico = 'Lorem Ipsum är en utfyllnadstext från tryck- och förlagsindustrin. Lorem ipsum har varit standard ända sedan 1500-talet, när en okänd boksättare tog att antal bokstäver och blandade dem för att göra ett provexemplar av en bok.';
 
-var circle = document.getElementsByClassName('circle-img');
-for (var i = 0; i < circle.length; i++){
-  circle[i].addEventListener('click', circleClicked);
+if(desktop.matches){
+  var circle = document.getElementsByClassName('circle-img');
+  for (var i = 0; i < circle.length; i++){
+    circle[i].addEventListener('click', circleClicked);
+  }
 }
 
 function circleClicked(text){
