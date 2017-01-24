@@ -49,17 +49,18 @@ function scrollEffects() {
                 if (i != 5) {
                     navLinks[i].style.color = 'white';
                 }
+
             }
         }
 
-        if (scrollBarPosition > 2500) {
-            navLinks[6].style.color = 'rgb(223, 72, 89)';
-            for (let i = 4; i < navLinks.length; i++) {
-                if (i !== 6) {
-                    navLinks[i].style.color = 'white';
-                }
+ if (scrollBarPosition > 2500) {
+        navLinks[6].style.color = 'rgb(223, 72, 89)';
+        for (let i = 4; i < navLinks.length; i++) {
+            if (i !== 6) {
+                navLinks[i].style.color = 'white';
             }
         }
+  }
         if (scrollBarPosition > 3370) {
             for (let y = 0; y < aboutUsBox.length; y++) {
                 aboutUsBox[y].className += ' slideUp';
@@ -71,6 +72,7 @@ function scrollEffects() {
                 }
             }
         }
+
         if (scrollBarPosition > 4400) {
             navLinks[8].style.color = 'rgb(223, 72, 89)';
             for (let i = 4; i < navLinks.length; i++) {
