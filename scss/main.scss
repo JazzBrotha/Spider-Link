@@ -10,7 +10,7 @@ body {
   }
 }
 
-.canvas {
+html {
     font-size: 0.9em;
     font-family: $font-primary;
     line-height: 1.5;
@@ -1031,7 +1031,7 @@ input[type="checkbox"]:checked ~ .responsive-nav .nav-item {
     padding-top: 2rem;
 
     @media #{$tablet} {
-      padding-top: 0;
+      padding-top: 3.5rem;
     }
 }
 
@@ -1040,24 +1040,6 @@ input[type="checkbox"]:checked ~ .responsive-nav .nav-item {
     padding-bottom: 5rem;
   }
 }
-
-.pt-35-tablet {
-  @media #{$tablet} {
-    padding-top: 3.5rem;
-  }
-
-  @media #{$desktop} {
-    padding-top: 0;
-  }
-}
-
-.pt-35-dektop {
-
-  @media #{$desktop} {
-    padding-top: 3.5rem;
-  }
-}
-
 
 /* & MARGINS */
 .m-0 {
@@ -1306,9 +1288,10 @@ input[type="checkbox"]:checked ~ .responsive-nav .nav-item {
 
 .box {
     transition: all 0.2s ease-in-out;
+    padding: 2em 0 0 0;
 
     @media #{$tablet} {
-      padding: 0 3em;
+      padding: 0 3em 3.5em 3em;
     }
 
     &:hover {
