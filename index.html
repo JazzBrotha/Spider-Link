@@ -7,8 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Spider-Link</title>
     <link rel="stylesheet" href="icons/css/font-awesome.min.css">
+    <!-- build:css css/main.min.css -->
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
+    <!-- endbuild -->
     <link rel="shortcut icon" type="image/png" href="pics/logo.png" />
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <noscript>
@@ -30,9 +32,7 @@
       </style>
     </noscript>
 </head>
-
 <body>
-
   <header class="fp-header">
     <nav class="topnav">
       <noscript>
@@ -52,11 +52,11 @@
         <li class="nav-item"><a class="nav-links" href="#contact">Kontakt</a></li>
       </ul>
           <ul class="desktop-nav tablet linear-05" id="desktop-nav">
-            <li class="nav-item"><a class="active nav-links linear-05" href="#">Hem</a></li>
-            <li class="nav-item"><a class="nav-links linear-05" href="#work">Uppdrag</a></li>
-            <li class="nav-item"><a class="nav-links linear-05" href="#services">Våra tjänster</a></li>
-            <li class="nav-item"><a class="nav-links linear-05" href="#about">Om oss</a></li>
-            <li class="nav-item"><a class="nav-links linear-05" href="#contact">Kontakt</a></li>
+            <li class="nav-item"><a class="active nav-links" href="#">Hem</a></li>
+            <li class="nav-item"><a class="nav-links" href="#work">Uppdrag</a></li>
+            <li class="nav-item"><a class="nav-links" href="#services">Våra tjänster</a></li>
+            <li class="nav-item"><a class="nav-links" href="#about">Om oss</a></li>
+            <li class="nav-item"><a class="nav-links" href="#contact">Kontakt</a></li>
        </ul>
      </nav>
 
@@ -218,7 +218,7 @@
                   <i class="fa fa-cloud fa-3x mb-15 service-icon" aria-hidden="true"></i>
                 </div>
                 <h3 class="text-center">Webbhotell</h3>
-                <p class="tablet ">Vi erbjuder tjänster inom förvaltning, drift och support. Vi har en väl beprövad metodik och struktur för att säkerställa att du som kund får en smidig, säker och helhetstäckande tjänst kring löpande förvaltning.  </p>
+                <p class="tablet">Vi erbjuder tjänster inom förvaltning, drift och support. Vi har en väl beprövad metodik och struktur för att säkerställa att du som kund får en smidig, säker och helhetstäckande tjänst kring löpande förvaltning.  </p>
             </div>
               <div class="col-d-4 col-t-6 col-m-6 box">
                 <div class="flex-center">
@@ -277,18 +277,36 @@
                 <h4 class="mt-15">Frontend Utvecklare</h4>
                 <p class="mt-15">mattias@spiderlink.se</p>
             </div>
+                <div id="popup-matte">
+                  <span class="heading-person">Mattias Östblom</span><br/>
+                  <span class="title-person">Frontend Utvecklare</span><br/><br/>
+                  <span class="about-person">Sedan Spider Link grundades har Mattias varit företagets ledstjärna inom webbutveckling. Mattias skicklighet som programmerare utmärker honom som en exceptionell resurs för Spider Link. Han trivs lika bra att arbeta med frontend- som backend-delen av en lösning.</span>
+                  <span class="btnClose">Stäng</span>
+                </div>
             <div class="col-t-4 about-border-box flex-center flex-column pt-1">
                 <img class="circle-img mb-10" id="andreas" src="pics/andreas.jpg" alt="Andreas">
                 <h3>Andreas Engström</h3>
                 <h4 class="mt-15">Frontend Utvecklare</h4>
                 <p class="mt-15">andreas@spiderlink.se</p>
             </div>
+                <div id="popup-andreas">
+                  <span class="heading-person">Andreas Engström</span><br/>
+                  <span class="title-person">Frontend Utvecklare</span><br/><br/>
+                  <span class="about-person">Andreas är vår kreativa utvecklare som har pysslat med programmering sen han skaffade sin första modem 1994. Som programmerare är Andreas en kreativ kraft i Spider Link som UI/UX-expert och iOS-utvecklare och kombinerar sina tekniska färdigheter med sitt öga för system och gränssnitt.</span>
+                  <span class="btnClose">Stäng</span>
+                </div>
             <div class="col-t-4 about-border-box flex-center flex-column pt-1">
                 <img class="circle-img mb-10" id="nicolas" src="pics/Nicolas.jpg" alt="Nicolas">
                 <h3>Nicolas Fuentes</h3>
                 <h4 class="mt-15">Frontend Utvecklare</h4>
                 <p class="mt-15">nicolas@spiderlink.se</p>
           </div>
+            <div id="popup-nico">
+              <span class="heading-person">Nicolas Fuentes</span><br/>
+              <span class="title-person">Frontend Utvecklare</span><br/><br/>
+              <span class="about-person">Med en förkärlek för läcker design och frontendutveckling skapar Nicolas hemsidor och webblösningar med fingertoppskänsla. Han är utvecklare med fokus på webb, UX och engagerande digitala upplevelser.</span>
+              <span class="btnClose">Stäng</span>
+            </div>
         </article>
     </section>
 
@@ -391,7 +409,10 @@
       </section>
 
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAnVwihuAauJVhTupIfX0uIPN33WNhYvOE&callback=initMap"></script>
+
+    <!--build:js js/main.min.js -->
     <script src="js/script.js"></script>
+    <!-- endbuild -->
 
 </body>
 </html>
