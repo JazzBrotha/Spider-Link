@@ -1000,10 +1000,6 @@ input[type="checkbox"]:checked ~ .responsive-nav .nav-item {
 
 .mt-5 {
     margin-top: 5rem;
-
-    @media #{$tablet} {
-      margin-top: 0;
-    }
 }
 
 
@@ -1070,10 +1066,6 @@ input[type="checkbox"]:checked ~ .responsive-nav .nav-item {
 
 .mt-2 {
     margin-top: 2rem;
-}
-
-.mt-50 {
-    margin-top: 50px;
 }
 
 .mt-200 {
