@@ -40,6 +40,8 @@ function scrollEffects() {
             for (let i = 4; i < navLinks.length; i++) {
                 navLinks[i].style.transform  = "scale(1)";
                 navLinks[i].style.padding = "0.8em";
+                navLinks[i].className = "nav-links";
+
             }
         }
         if (scrollBarPosition > 600) {
@@ -50,6 +52,7 @@ function scrollEffects() {
             for (let i = 4; i < navLinks.length; i++) {
                 navLinks[i].style.transform  = "scale(0.7)";
                 navLinks[i].style.padding  = "0";
+                navLinks[i].className += " small-links";
             }
         }
 
@@ -112,7 +115,7 @@ function scrollEffects() {
     }
     if (mobile.matches) {
         if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
-            scroller.style.bottom = "2.4rem";
+            scroller.style.bottom = "2rem";
         } else {
             scroller.style.bottom = "0";
         }
